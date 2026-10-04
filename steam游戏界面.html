@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>steam</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #181D25;
+    }
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top-left,
+    .top-right {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-top: 5px;
+    }
+
+    .top-right {
+        margin-right: 15px;
+    }
+
+    .top a {
+        text-decoration: none;
+        color: #757474;
+        font-size: 13px;
+
+    }
+
+    .top a:hover {
+        color: #f7f7f7;
+    }
+
+    .ph01 img {
+        width: 50px;
+    }
+
+    .ph02 img,
+    .ph03 img {
+        width: 40px;
+    }
+
+    .ph04 img {
+        width: 50px;
+    }
+
+    .choice {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .choice-left {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .choice-left a {
+        text-decoration: none;
+        color: #DCDEDF;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .bow01 img {
+        width: 28px;
+    }
+
+    .bow02 img {
+        width: 25px;
+    }
+
+    .list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #1B2535;
+        height: 40px;
+        margin-top: 10px;
+    }
+
+    .list-left,
+    .list-right {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .list-left a {
+        text-decoration: none;
+        color: #DCDEDF;
+        font-size: 15px;
+        margin-left: 5px;
+        padding-left: 10px;
+    }
+
+    .wanted img {
+        width: 60px;
+        margin-right: 10px;
+    }
+
+    .list-right input {
+        background-color: #39414F;
+        border: none;
+        outline: none;
+        height: 27px;
+        width: 410px;
+        /* 编辑搜索框 */
+    }
+
+    .list-right input::placeholder {
+
+        color: #C8D4DF;
+        font-size: 13px;
+        font-style: italic;
+        /* 编辑搜索框中文字 */
+    }
+
+    .glass {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0;
+        height: 27px;
+        width: 40px;
+        display: flex;
+        /* 编辑搜索按钮 */
+    }
+
+    .major {
+        height: 555px;
+        background-color: #28364E;
+    }
+
+    p {
+        color: #C8D4DF;
+        font-size: 13px;
+        padding-left: 30px;
+        padding-top: 10px;
+        margin: 0;
+    }
+
+    .gamename {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    .gamename-left {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-left: 28px;
+        font-size: 30px;
+        color: #DCDEDF;
+        padding-top: 0;
+    }
+
+    .gamename-left {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .gamename-right a {
+        display: inline-block;
+        background-color: #2a475e;
+        text-decoration: none;
+        color: #7CC1F5;
+        font-size: 20px;
+        margin-right: 28px;
+        border-radius: 3px;
+        padding: 5px 10px;
+    }
+
+    .introduction {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 10px;
+        margin-left: 28px;
+        /* 顶部对齐 */
+    }
+
+    .introduction-left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 2.2;
+    }
+
+    .introduction-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1;
+    }
+
+    .post img {
+        width: 90%;
+        height: auto;
+    }
+
+    .brief p {
+        color: #C8D4DF;
+        font-size: 15px;
+        margin: 0;
+        padding-left: 0px;
+        padding-right: 22px;
+    }
+
+    .information {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 25px;
+    }
+
+    .information .details {
+        display: flex;
+        font-size: 14px;
+        line-height: 1.5;
+
+
+    }
+
+    .details .first {
+        color: #778590;
+        margin-right: 10px;
+        padding-right: 1px;
+    }
+
+    .details .second {
+        color: #7CC1F5;
+        margin-left: 70px;
+
+    }
+
+    .details .third {
+        color: #778590;
+        margin-left: 57px;
+    }
+
+    .details .second01 {
+        color: #7CC1F5;
+        margin-left: 57px;
+
+    }
+
+    .details .second02 {
+        color: #7CC1F5;
+        margin-left: 32px;
+
+    }
+</style>
+
+<body>
+    <div class="top">
+        <div class="top-left">
+            <a href="#" class="ph01"><img src="steam图标.png" alt="steam图标"></a>
+            <a href="#">查看</a>
+            <a href="#">好友</a>
+            <a href="#">游戏</a>
+            <a href="#">帮助</a>
+        </div>
+        <div class="top-right">
+            <a href="#" class="ph02"><img src="新闻喇叭图标.png" alt="新闻喇叭图标"></a>
+            <a href="#" class="ph03"><img src="查看通知图标.png" alt="查看通知图标"></a>
+            <a href="#" class="ph04"><img src="个人主页图标.png" alt="个人主页图标"></a>
+        </div>
+    </div>
+    <div class="choice">
+        <div class="choice-left">
+            <a href="#" class="bow01"><img src="左箭头.png" alt="左箭头"></a>
+            <a href="#" class="bow02"><img src="右箭头.png" alt="右箭头"></a>
+            <a href="#">商店</a>
+            <a href="#">库</a>
+            <a href="#">社区</a>
+            <a href="#">LYRICS</a>
+        </div>
+    </div>
+    <div class="list">
+        <div class="list-left">
+            <a href="#">浏览 </a>
+            <a href="#">推荐 </a>
+            <a href="#">畅玩方式 </a>
+            <a href="#">特别栏目</a>
+        </div>
+        <div class="list-right">
+            <input type="text" placeholder="搜索商店">
+            <button class="glass" type="button"><img src="搜索.png" alt="搜索" style="width: 75%; height: auto;"></button>
+            <a href="#" class="wanted"><img src="愿望单.png" alt="愿望单"></a>
+        </div>
+    </div>
+    <div class="major">
+        <div>
+            <p>所有游戏>动作游戏>渔力全开</p>
+        </div>
+        <div class="gamename">
+            <div class="gamename-left">渔力全开</div>
+            <div class="gamename-right">
+                <a href="#">社区中心</a>
+            </div>
+        </div>
+        <div class="introduction">
+            <div class="introduction-left">
+                <img src="游戏界面.png" alt="游戏界面" style="width:95%">
+            </div>
+            <div class=" introduction-right">
+                <div class="post">
+                    <img src="游戏海报.png" alt="游戏海报">
+                </div>
+                <div class="brief">
+                    <p>《How to Fish》（渔力全开）是一款物力交互的钓鱼模拟游戏，支持 1 至 4 名玩家。喝着酒，驾着船，你突然撞上了一座小岛。为了能安全回家，你必须学会​​钓鱼。</p>
+                </div>
+                <div class="information">
+                    <div class="details">
+                        <span class="first">最近评测:</span>
+                        <span class="second01">好评如潮(21,945)</span>
+                    </div>
+                    <div class="details">
+                        <span class="first">简体中文评测</span>
+                        <span class="second02">特别好评(12,239)</span>
+                    </div>
+                    <div class="details">
+                        <span class="first">发行日期:</span>
+                        <span class="third">2026年 8 月 20 日</span>
+                    </div>
+                    <div class="details">
+                        <span class="first">开发者:</span>
+                        <span class="second">Dazed Games</span>
+                    </div>
+                    <div class="details">
+                        <span class="first">发行商:</span>
+                        <span class="second">Dazed Games</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- 看到小黑盒上在促销这个游戏，但我也没买 -->
+</body>
+
+</html>
